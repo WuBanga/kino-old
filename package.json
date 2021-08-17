@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "format": "prettier --write \"src/**/*.{ts, tsx}\""
+    "format": "prettier --write \"src/**/*.{ts, tsx}\"",
+    "lint": "eslint \"src/**/*.{ts,tsx}\" --quiet"
   },
   "author": "",
   "license": "ISC",
