@@ -26,6 +26,8 @@ jobs:
           tags: ghcr.io/wubanga/kino:${{ github.sha }}
           cache-from: type=registry,ref=ghcr.io/wubanga/kino:latest
           cache-to: type=inline
+          secrets: |
+            "API_KEY=${{ secrets.API_KEY }}"
   deploy:
     runs-on: ubuntu-latest
     needs: build
@@ -42,7 +44,6 @@ jobs:
           target: '/docker/kino/'
           overwrite: true
           source: 'docker-compose.yaml'
-          strip_components: 2
       - name: Docker Compose Up
         uses: appleboy/ssh-action@master
         with:
@@ -52,5 +53,6 @@ jobs:
           script: |
             docker login ghcr.io --username ${{github.actor}} --password ${{secrets.GITHUB_TOKEN}}
             cd /docker/kino
+            export IMAGE_VERSION=${{ github.sha }}
             docker-compose up -d
             docker image prune -a -f
