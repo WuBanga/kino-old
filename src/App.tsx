@@ -1,5 +1,6 @@
 import { render } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
+import { FilmsList } from './FilmsList';
 import Menu from './Menu';
 
 const App = () => {
@@ -7,6 +8,9 @@ const App = () => {
     <BrowserRouter>
       <div>
         <Menu />
+      </div>
+      <div className="flex justify-center my-5">
+        <FilmsList />
       </div>
     </BrowserRouter>
   );
