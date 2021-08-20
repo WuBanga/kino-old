@@ -13,7 +13,7 @@ export const FilmPreview = ({
   posterLink,
 }: FilmPreviewProps) => {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col items-center">
       {posterLink === null ? (
         <img alt="nothing" />
       ) : (
@@ -23,7 +23,7 @@ export const FilmPreview = ({
           crossOrigin="anonymous"
         />
       )}
-      <div className="text-lg font-bold">{title}</div>
+      <div className="text-lg font-bold center">{title}</div>
     </div>
   );
 };

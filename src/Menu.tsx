@@ -3,12 +3,10 @@ import { Link } from 'react-router-dom';
 
 const Menu: FunctionComponent = () => {
   return (
-    <div className="bg-yellow-400 flex flex-row text-3xl p-2 w-full justify-between">
-      <Link to="/">
-        <div className="mx-4">Kᴉno</div>
-      </Link>
-      <input className="mx-4 rounded-lg w-4/12" type="text" />
-      <button className="mx-4 text-red-600">Sign in</button>
+    <div className="bg-yellow-400 flex flex-row text-3xl py-2 px-5 w-full justify-between">
+      <div className="w-1/5">Kᴉno</div>
+      <input className="rounded-lg w-1/2" type="text" />
+      <button className="w-1/5 text-red-600 text-right">Sign in</button>
     </div>
   );
 };
