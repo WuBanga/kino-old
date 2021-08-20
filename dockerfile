@@ -2,6 +2,7 @@ FROM node:lts as builder
 
 WORKDIR /app
 COPY . .
+RUN echo $API_KEY > .env
 RUN npm install
 RUN npm run build
 
