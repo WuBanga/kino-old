@@ -7,12 +7,6 @@ export interface FilmPreviewProps {
   posterLink: string | null;
 }
 
-const base_url = 'https://image.tmdb.org/t/p/';
-const file_size = 'w500';
-const file_path = '/jlGmlFOcfo8n5tURmhC7YVd4Iyy.jpg';
-
-('https://image.tmdb.org/t/p/w500/jlGmlFOcfo8n5tURmhC7YVd4Iyy.jpg');
-
 export const FilmPreview = ({
   title,
   description,
