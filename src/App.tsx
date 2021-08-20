@@ -6,12 +6,8 @@ import Menu from './Menu';
 const App = () => {
   return (
     <BrowserRouter>
-      <div>
-        <Menu />
-      </div>
-      <div className="flex justify-center my-5">
-        <FilmsList />
-      </div>
+      <Menu />
+      <FilmsList />
     </BrowserRouter>
   );
 };
