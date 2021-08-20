@@ -12,6 +12,7 @@ module.exports = {
     extend: {
       display: ['group-hover'],
       brightness: ['group-hover'],
+      translate: ['group-hover'],
     },
   },
   plugins: [],
