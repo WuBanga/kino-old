@@ -26,6 +26,8 @@ jobs:
           tags: ghcr.io/wubanga/kino:${{ github.sha }}
           cache-from: type=registry,ref=ghcr.io/wubanga/kino:latest
           cache-to: type=inline
+          secrets: |
+            "API_KEY=${{ secrets.API_KEY }}"
   deploy:
     runs-on: ubuntu-latest
     needs: build

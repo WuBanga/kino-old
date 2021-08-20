@@ -10,6 +10,7 @@ services:
       - traefik.http.routers.kino.rule=Host(`kino.okinazuno.me`)
       - traefik.http.routers.kino.tls=true
       - traefik.http.routers.kino.tls.certresolver=letsEncrypt
+      
 networks:
   default:
     external: true
