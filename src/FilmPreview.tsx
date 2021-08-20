@@ -24,7 +24,7 @@ export const FilmPreview = ({
             crossOrigin="anonymous"
           />
         )}
-        <p className="text-white text-xl absolute left-2 right-2 bottom-2 hidden group-hover:block">
+        <p className="text-white text-xl absolute left-2 right-2 bottom-2 text-justify transform transition-all translate-y-full group-hover:translate-y-0 group-hover:opacity-100 opacity-0">
           {description}
         </p>
       </div>
