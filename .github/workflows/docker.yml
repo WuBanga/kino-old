@@ -51,5 +51,6 @@ jobs:
           script: |
             docker login ghcr.io --username ${{github.actor}} --password ${{secrets.GITHUB_TOKEN}}
             cd /docker/kino
+            export IMAGE_VERSION=${{ github.sha }}
             docker-compose up -d
             docker image prune -a -f
