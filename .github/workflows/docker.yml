@@ -42,7 +42,6 @@ jobs:
           target: '/docker/kino/'
           overwrite: true
           source: 'docker-compose.yaml'
-          strip_components: 2
       - name: Docker Compose Up
         uses: appleboy/ssh-action@master
         with:
