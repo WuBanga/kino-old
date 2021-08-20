@@ -2,10 +2,17 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      brightness: {
+        30: '0.3',
+      },
+    },
   },
   variants: {
-    extend: {},
+    extend: {
+      display: ['group-hover'],
+      brightness: ['group-hover'],
+    },
   },
   plugins: [],
-}
+};
