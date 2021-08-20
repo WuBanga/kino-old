@@ -2,7 +2,6 @@
   "name": "kino",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.html",
   "scripts": {
     "format": "prettier --write \"src/**/*.{ts, tsx}\"",
     "lint": "eslint \"src/**/*.{ts,tsx}\" --quiet",
