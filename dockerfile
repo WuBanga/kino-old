@@ -3,7 +3,7 @@ FROM node:lts as builder
 WORKDIR /app
 COPY . .
 RUN --mount=type=secret,id=API_KEY \
-  mv /run/secrets/API_KEY /app/.env
+  cp /run/secrets/API_KEY /app/.env
 RUN npm install
 RUN npm run build
 
