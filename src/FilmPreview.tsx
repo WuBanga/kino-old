@@ -13,7 +13,7 @@ export const FilmPreview = ({
 }: FilmPreviewProps) => {
   return (
     <figure className="flex flex-col items-center gap-1">
-      <div className="group relative">
+      <div className="group relative overflow-hidden">
         {posterLink === null ? (
           <div className="bg-gray-200 w-full">Kᴉno</div>
         ) : (
