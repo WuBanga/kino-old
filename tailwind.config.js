@@ -10,7 +10,6 @@ module.exports = {
   },
   variants: {
     extend: {
-      display: ['group-hover'],
       brightness: ['group-hover'],
       translate: ['group-hover'],
     },
