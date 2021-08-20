@@ -3,7 +3,7 @@ services:
   s3mer:
     container_name: kino
     restart: always
-    image: ghcr.io/wubanga/kino/:${IMAGE_VERSION}
+    image: ghcr.io/wubanga/kino:${IMAGE_VERSION}
     ports:
       - 5000:5000
     labels: 
