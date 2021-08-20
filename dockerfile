@@ -4,8 +4,8 @@ WORKDIR /app
 COPY . .
 RUN echo $API_KEY > .env
 RUN echo $API_KEY
-RUN --mount=type=secret,id=github_token \
-  cat /run/secrets/github_token
+RUN --mount=type=secret,id=API_KEY \
+  cat /run/secrets/API_KEY
 RUN cat .env
 RUN npm install
 RUN npm run build
