@@ -2,8 +2,7 @@ FROM node:lts as builder
 
 WORKDIR /app
 COPY . .
-RUN --mount=type=secret,id=API_KEY \
-  cp /run/secrets/API_KEY /app/.env
+RUN --mount=type=secret,id=API_KEY echo "API_KEY=$(cat /run/secrets/API_KEY)" > /app/.env
 RUN npm install
 RUN npm run build
 
