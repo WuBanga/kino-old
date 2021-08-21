@@ -34,20 +34,16 @@ export const FilmPage = (props: FilmPageProps) => {
     isError: isConfigurationError,
   } = useConfiguration();
 
-  if (
-    isMovieError ||
-    isConfigurationError ||
-    (isConfigurationLoading === false && configuration === undefined)
-  ) {
+  if (isMovieLoading || isConfigurationLoading) {
+    return <h1>Loading...</h1>;
+  }
+
+  if (isMovieError || isConfigurationError || configuration === undefined) {
     return (
       <h1 className="text-3xl font-extrabold text-red-500">
         Something goes wrong
       </h1>
     );
-  }
-
-  if (isMovieLoading || isConfigurationLoading) {
-    return <h1>Loading...</h1>;
   }
 
   return (
