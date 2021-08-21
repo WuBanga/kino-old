@@ -10,16 +10,16 @@ export const FilmsList = () => {
     isError: isConfigurationError,
   } = useConfiguration();
 
+  if (isFilmsLoading || isConfigurationLoading) {
+    return <h1>Loading...</h1>;
+  }
+
   if (isFilmsError || isConfigurationError || configuration === undefined) {
     return (
       <h1 className="text-3xl font-extrabold text-red-500">
         Something goes wrong
       </h1>
     );
-  }
-
-  if (isFilmsLoading || isConfigurationLoading) {
-    return <h1>Loading...</h1>;
   }
 
   return (
