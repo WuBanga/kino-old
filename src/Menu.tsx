@@ -5,7 +5,7 @@ const Menu: FunctionComponent = () => {
   return (
     <div className="bg-yellow-400 flex flex-wrap py-2 px-5 w-full justify-between gap-2">
       <Link to="/">
-        <div className="text-4xl font-medium">Kᴉno</div>
+        <a className="text-4xl font-medium">Kᴉno</a>
       </Link>
       <input
         className="text-xl w-full rounded-lg sm:w-1/2 sm:order-none order-2 p-2"
