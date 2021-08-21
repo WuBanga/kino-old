@@ -31,9 +31,12 @@ export const FilmPreview = ({
           {description}
         </p>
       </div>
-      <Link to={`/movie/${id}`}>
-        <figcaption className="text-2xl font-bold center">{title}</figcaption>
-      </Link>
+
+      <figcaption className="text-2xl font-bold center">
+        <Link to={`/movie/${id}`}>
+          <a>{title}</a>
+        </Link>
+      </figcaption>
     </figure>
   );
 };
