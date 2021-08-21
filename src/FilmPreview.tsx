@@ -35,9 +35,7 @@ export const FilmPreview = ({
       </div>
 
       <figcaption className="text-2xl font-bold center">
-        <Link to={`/movie/${id}`}>
-          <a>{title}</a>
-        </Link>
+        <Link to={`/movie/${id}`}>{title}</Link>
       </figcaption>
     </figure>
   );
