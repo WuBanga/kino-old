@@ -25,6 +25,8 @@ export const FilmPreview = ({
             alt={`Poster of ${title} film`}
             crossOrigin="anonymous"
             loading="lazy"
+            width="500"
+            height="750"
           />
         )}
         <p className="text-white text-xl absolute left-2 right-2 bottom-2 text-justify transform transition-all translate-y-full group-hover:translate-y-0 group-hover:opacity-100 opacity-0">
