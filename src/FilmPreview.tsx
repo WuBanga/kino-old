@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export interface FilmPreviewProps {
   id: number;
   title: string;
@@ -22,13 +24,16 @@ export const FilmPreview = ({
             src={posterLink}
             alt={`Poster of ${title} film`}
             crossOrigin="anonymous"
+            loading="lazy"
           />
         )}
         <p className="text-white text-xl absolute left-2 right-2 bottom-2 text-justify transform transition-all translate-y-full group-hover:translate-y-0 group-hover:opacity-100 opacity-0">
           {description}
         </p>
       </div>
-      <figcaption className="text-2xl font-bold center">{title}</figcaption>
+      <Link to={`/movie/${id}`}>
+        <figcaption className="text-2xl font-bold center">{title}</figcaption>
+      </Link>
     </figure>
   );
 };
