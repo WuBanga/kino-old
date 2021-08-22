@@ -1,13 +1,23 @@
 import { render } from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { FilmsList } from './FilmsList';
 import Menu from './Menu';
+import { FilmPage } from './FilmPage';
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Menu />
-      <FilmsList />
+      <div className="h-screen flex flex-col">
+        <Menu />
+        <Switch>
+          <Route path="/movie/:id">
+            <FilmPage />
+          </Route>
+          <Route path="/">
+            <FilmsList />
+          </Route>
+        </Switch>
+      </div>
     </BrowserRouter>
   );
 };
