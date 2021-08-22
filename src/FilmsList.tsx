@@ -32,7 +32,7 @@ export const FilmsList = () => {
           description={film.overview}
           posterLink={
             film.poster_path
-              ? `${configuration.images.base_url}w500${film.poster_path}`
+              ? `${configuration.images.secure_base_url}w500${film.poster_path}`
               : null
           }
         />
