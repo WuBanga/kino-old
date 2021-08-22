@@ -7,15 +7,17 @@ import { FilmPage } from './FilmPage';
 const App = () => {
   return (
     <BrowserRouter>
-      <Menu />
-      <Switch>
-        <Route path="/movie/:id">
-          <FilmPage />
-        </Route>
-        <Route path="/">
-          <FilmsList />
-        </Route>
-      </Switch>
+      <div className="h-screen flex flex-col">
+        <Menu />
+        <Switch>
+          <Route path="/movie/:id">
+            <FilmPage />
+          </Route>
+          <Route path="/">
+            <FilmsList />
+          </Route>
+        </Switch>
+      </div>
     </BrowserRouter>
   );
 };

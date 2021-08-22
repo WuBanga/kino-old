@@ -1,10 +1,13 @@
 module.exports = {
-  purge: ["./src/**/*.tsx"],
+  purge: ['./src/**/*.tsx'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       brightness: {
         30: '0.3',
+      },
+      gridTemplateRows: {
+        mysize: 'auto 1fr',
       },
     },
   },
