@@ -24,18 +24,21 @@ export const FilmPage = () => {
     if (
       !movie ||
       !configuration ||
-      !mainDivRef.current ||
       !movie.backdrop_path
     ) {
       return;
     }
-    const backdropLink = `${configuration.images.base_url}w1280${movie.backdrop_path}`;
+    const backdropLink = `${configuration.images.secure_base_url}w1280${movie.backdrop_path}`;
     void fetch(backdropLink)
       .then((res) => res.blob())
       .then((blob) => {
+        if (!mainDivRef.current) {
+          return;
+        }
+
         const url = URL.createObjectURL(blob);
 
-        mainDivRef.current!.style.backgroundImage = `url(${url})`;
+        mainDivRef.current.style.backgroundImage = `url(${url})`;
       });
   }, [movie, configuration]);
 
@@ -57,7 +60,7 @@ export const FilmPage = () => {
   }
 
   const posterLink = movie.poster_path
-    ? `${configuration.images.base_url}w500${movie.poster_path}`
+    ? `${configuration.images.secure_base_url}w500${movie.poster_path}`
     : null;
 
   return (
